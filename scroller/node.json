@@ -29,6 +29,12 @@
             [300, "Even faster"]
         ],
         "default": 100
+    }, {
+        "title": "Ticker Background Color",
+        "ui_width": 4,
+        "type": "color",
+        "name": "background_color",
+        "default": [0,0,0,0.5]
     },
 
     {
