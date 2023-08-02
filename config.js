@@ -143,12 +143,10 @@ const store = new Vuex.Store({
       }
 
       console.log("-----------JA------");
-      let schedules = state.schedules;
+      let schedules = state.config.schedules;
       for (let i = 0; i < schedules.length; i++) {
         console.log(schedules[i]);
       }
-      state.schedules.map((schedule) => {});
-      console.log("-----------nee------");
       recalc_layout(state);
     },
     assets_update(state, assets) {
@@ -159,7 +157,7 @@ const store = new Vuex.Store({
       recalc_layout(state);
     },
 
-    // Schedule & Related mutations
+    // Schedule & Related mutationsG
     schedule_create(state) {
       var new_schedule = {
         name: "Unnamed",
