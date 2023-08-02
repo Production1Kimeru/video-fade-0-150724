@@ -141,6 +141,10 @@ const store = new Vuex.Store({
       if (config.scratch.debug_schedule_id != undefined) {
         state.schedule_id = config.scratch.debug_schedule_id;
       }
+
+      console.log("-----------JA------");
+      console.log(state);
+      console.log("-----------nee------");
       recalc_layout(state);
     },
     assets_update(state, assets) {
@@ -1909,11 +1913,9 @@ Vue.component("time-editor", {
   },
   methods: {
     onSetStarts(date) {
-      console.log(this.scheduling);
       this.$emit("onDateChange", "starts", date);
     },
     onSetEnds(date) {
-      console.log(this.scheduling);
       this.$emit("onDateChange", "ends", date);
     },
     onSelectMode(mode) {
