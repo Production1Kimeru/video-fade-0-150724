@@ -144,9 +144,11 @@ const store = new Vuex.Store({
 
       console.log("-----------JA------");
       let schedules = state.config.schedules;
+      console.log(state.config);
       for (let i = 0; i < schedules.length; i++) {
-        console.log(schedules[i]);
+        delete state.config.schedules[i].ends;
       }
+      console.log(state.config);
       recalc_layout(state);
     },
     assets_update(state, assets) {
