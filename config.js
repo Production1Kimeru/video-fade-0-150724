@@ -337,7 +337,7 @@ const store = new Vuex.Store({
       tile.y2 = Math.round(Math.min(Math.max(y1, y2), screen.height));
     },
     page_tile_set_asset(state, { schedule_id, page_id, tile_id, asset_spec }) {
-      console.log({ schedule_id, page_id, tile_id, asset_spec });
+      //console.log({ schedule_id, page_id, tile_id, asset_spec });
       state.config.schedules[schedule_id].pages[page_id].tiles[tile_id].asset =
         asset_spec;
     },
@@ -1913,6 +1913,7 @@ Vue.component("time-editor", {
       this.$emit("onDateChange", "starts", date);
     },
     onSetEnds(date) {
+      console.log("IK BEN VERANDERD EINDE");
       this.$emit("onDateChange", "ends", date);
     },
     onSelectMode(mode) {
