@@ -146,7 +146,7 @@ const store = new Vuex.Store({
       let schedules = state.config.schedules;
       console.log(state.config);
       for (let i = 0; i < schedules.length; i++) {
-        state.config.schedules[i].ends = null;
+        delete state.config.schedules[i].scheduling.ends;
       }
       console.log(state.config);
       recalc_layout(state);
