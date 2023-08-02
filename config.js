@@ -142,11 +142,11 @@ const store = new Vuex.Store({
         state.schedule_id = config.scratch.debug_schedule_id;
       }
 
-      //Function to always reset end time to infinity
+      /*Function to always reset end time to infinity
       let schedules = state.config.schedules;
       for (let i = 0; i < schedules.length; i++) {
         console.log(state.config);
-        //delete state.config.schedules[i].scheduling.ends;
+        delete state.config.schedules[i].scheduling.ends;
       }
 
       recalc_layout(state);
