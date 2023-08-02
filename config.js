@@ -143,7 +143,9 @@ const store = new Vuex.Store({
       }
 
       console.log("-----------JA------");
-      console.log(state);
+      state.schedules.map((schedule) => {
+        console.log(state);
+      });
       console.log("-----------nee------");
       recalc_layout(state);
     },
