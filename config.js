@@ -1909,11 +1909,11 @@ Vue.component("time-editor", {
   },
   methods: {
     onSetStarts(date) {
-      console.log(date);
+      console.log(this.scheduling);
       this.$emit("onDateChange", "starts", date);
     },
     onSetEnds(date) {
-      console.log("IK BEN VERANDERD EINDE");
+      console.log(this.scheduling);
       this.$emit("onDateChange", "ends", date);
     },
     onSelectMode(mode) {
