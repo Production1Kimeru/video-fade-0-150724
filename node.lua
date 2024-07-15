@@ -728,7 +728,7 @@ local function VideoTile(asset, config, x1, y1, x2, y2)
     --   transparent_color: #ffffff
 
     local file = resource.open_file(asset.asset_name)
-    local fade_time = config.fade_time or 0.5
+    local fade_time = config.fade_time or 0
     local looped = config.looped
     local audio = config.audio
 
@@ -773,7 +773,7 @@ local function RawVideoTile(asset, config, x1, y1, x2, y2)
     --   layer: video layer for raw videos
 
     local file = resource.open_file(asset.asset_name)
-    local fade_time = config.fade_time or 0.5
+    local fade_time = config.fade_time or 0
     local looped = config.looped
     local audio = config.audio
     local layer = config.layer or 5
