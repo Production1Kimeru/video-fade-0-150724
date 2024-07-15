@@ -918,7 +918,7 @@ local function FlatTile(asset, config, x1, y1, x2, y2)
     local a = (config.alpha or 255)/255
 
     local flat = resource.create_colored_texture(r, g, b, a)
-    local fade_time = config.fade_time or 0.5
+    local fade_time = config.fade_time or 0
 
     return function(starts, ends)
         for now in helper.frame_between(starts, ends) do
