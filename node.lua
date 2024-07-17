@@ -728,7 +728,7 @@ local function VideoTile(asset, config, x1, y1, x2, y2)
     --   transparent_color: #ffffff
 
     local file = resource.open_file(asset.asset_name)
-    local fade_time = config.fade_time or 0
+    local fade_time = 0
     local looped = config.looped
     local audio = config.audio
 
@@ -773,7 +773,7 @@ local function RawVideoTile(asset, config, x1, y1, x2, y2)
     --   layer: video layer for raw videos
 
     local file = resource.open_file(asset.asset_name)
-    local fade_time = config.fade_time or 0
+    local fade_time = 0
     local looped = config.looped
     local audio = config.audio
     local layer = config.layer or 5
@@ -918,7 +918,7 @@ local function FlatTile(asset, config, x1, y1, x2, y2)
     local a = (config.alpha or 255)/255
 
     local flat = resource.create_colored_texture(r, g, b, a)
-    local fade_time = config.fade_time or 0
+    local fade_time = 0
 
     return function(starts, ends)
         for now in helper.frame_between(starts, ends) do
@@ -1168,7 +1168,7 @@ local function TimeTile(asset, config, x1, y1, x2, y2)
 end
 
 local function MarkupTile(asset, config, x1, y1, x2, y2)
-    local fade_time = config.fade_time or 0
+    local fade_time = 0
     local text = config.text or ""
     local font_size = config.font_size or 35
     local align = config.align or "tl"
